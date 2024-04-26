@@ -61,12 +61,12 @@ class enen_Vocabulary{
         let pos = doc.querySelector('div.pos-icon').innerText || '';
         pos = pos ? `<span class="pos">${pos}</span>` : '';
 
-        // let desc_short = doc.querySelector('p.short') || '';
-        let desc_long = doc.querySelector('p.long') || '';
-        // desc_short = desc_short ? `<span class="eng_sent">${desc_short.innerText}</span>` : '';
-        desc_long = desc_long ? `<span class="eng_sent desc_long">${desc_long.innerText}</span>` : '';
+        let desc_short = doc.querySelector('p.short') || '';
+        // let desc_long = doc.querySelector('p.long') || '';
+        desc_short = desc_short ? `<span class="eng_sent">${desc_short.innerText}</span>` : '';
+        // desc_long = desc_long ? `<span class="eng_sent desc_long">${desc_long.innerText}</span>` : '';
         // let definition = `${pos}<span class="tran">${desc_short}<br>${desc_long}</span>`;
-        let definition = `${pos}<span class="tran">${desc_long}</span>`;
+        let definition = `${pos}<span class="tran">${desc_short}</span>`;
  
         let definitions = [definition];
         const contents = doc.querySelectorAll('div.word-definitions > ol > li') || [];
